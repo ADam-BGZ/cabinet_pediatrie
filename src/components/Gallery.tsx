@@ -52,12 +52,13 @@ export function Gallery() {
           </p>
         </div>
 
+        {/* GRID — no overlays, raw images only */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {photos.map((photo, i) => (
             <button
               key={i}
               onClick={() => setLightboxIndex(i)}
-              className={`relative rounded-2xl overflow-hidden group cursor-pointer ${
+              className={`rounded-2xl overflow-hidden cursor-pointer ${
                 i === 0 ? "col-span-2 row-span-2" : ""
               }`}
               aria-label={`Agrandir : ${photo.alt}`}
@@ -66,24 +67,17 @@ export function Gallery() {
                 src={photo.src}
                 alt={photo.alt}
                 loading="lazy"
-                className="w-full h-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full aspect-[4/3] object-cover"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="15 3 21 3 21 9" />
-                  <polyline points="9 21 3 21 3 15" />
-                  <line x1="21" y1="3" x2="14" y2="10" />
-                  <line x1="3" y1="21" x2="10" y2="14" />
-                </svg>
-              </div>
             </button>
           ))}
         </div>
       </div>
 
+      {/* LIGHTBOX — no background overlay, raw image only */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center animate-fade-in"
+          className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
           onClick={close}
           role="dialog"
           aria-label="Galerie photo"
@@ -119,7 +113,7 @@ export function Gallery() {
           <img
             src={photos[lightboxIndex].src}
             alt={photos[lightboxIndex].alt}
-            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg animate-fade-in"
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
