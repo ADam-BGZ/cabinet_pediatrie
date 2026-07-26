@@ -14,6 +14,9 @@ const photos = [
   { src: `${BASE_PATH}/images/gallery/gallery-6.webp`, alt: "Cabinet médical pédiatrique" },
 ];
 
+console.log("[Gallery] BASE_PATH:", JSON.stringify(BASE_PATH));
+console.log("[Gallery] photos[0].src:", photos[0].src);
+
 export function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const header = useScrollAnimation("down");
@@ -110,6 +113,7 @@ export function Gallery() {
             {lightboxIndex + 1} / {photos.length}
           </div>
 
+          {(() => { console.log("[Gallery lightbox] img src:", photos[lightboxIndex].src); return null; })()}
           <img
             src={photos[lightboxIndex].src}
             alt={photos[lightboxIndex].alt}
