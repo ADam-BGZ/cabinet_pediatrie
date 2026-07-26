@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.GITHUB_ACTIONS === "true";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/cabinet_pediatrie" : "",
-  assetPrefix: isProd ? "/cabinet_pediatrie/" : "",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   images: {
     unoptimized: true,
   },
