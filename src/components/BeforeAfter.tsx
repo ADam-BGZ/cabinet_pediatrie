@@ -8,20 +8,20 @@ import { BASE_PATH } from "@/lib/utils";
 const cases = [
   {
     id: 1,
-    before: "/images/img-11.webp",
-    after: "/images/img-12.webp",
+    before: `${BASE_PATH}/images/img-11.webp`,
+    after: `${BASE_PATH}/images/img-12.webp`,
     title: "Blanchiment dentaire",
   },
   {
     id: 2,
-    before: "/images/img-13.webp",
-    after: "/images/img-14.webp",
+    before: `${BASE_PATH}/images/img-13.webp`,
+    after: `${BASE_PATH}/images/img-14.webp`,
     title: "Facettes dentaires",
   },
   {
     id: 3,
-    before: "/images/img-15.webp",
-    after: "/images/img-16.webp",
+    before: `${BASE_PATH}/images/img-15.webp`,
+    after: `${BASE_PATH}/images/img-16.webp`,
     title: "Orthodontie",
   },
 ];
