@@ -7,6 +7,7 @@ import {
   ClockIcon,
 } from "@/components/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { BASE_PATH } from "@/lib/utils";
 
 const quickLinks = [
   { label: "Accueil", href: "#" },
@@ -42,10 +43,12 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-6">
-              {/* TODO: remplacer par le vrai logo du cabinet une fois fourni */}
-              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center inline-flex">
-                <span className="text-white font-bold text-lg">CP</span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${BASE_PATH}/images/logo-pediatrie.png`}
+                alt="Cabinet de Pédiatrie Dr. Abbad Adel"
+                className="w-14 h-14 rounded-full object-cover"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Cabinet de pédiatrie à Tétouan. Suivi médical des nourrissons,

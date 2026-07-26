@@ -2,6 +2,7 @@
 
 import { PhoneIcon, HeartIcon, ShieldIcon, UsersIcon } from "@/components/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { BASE_PATH } from "@/lib/utils";
 
 const features = [
   { icon: HeartIcon, text: "Approche bienveillante et rassurante" },
@@ -68,18 +69,15 @@ export function About() {
             </div>
           </div>
 
-          {/* Right — Placeholder image */}
+          {/* Right — Photo du Dr. Abbad Adel */}
           <div ref={right.refCallback} className={`flex-1 relative ${right.animationClass}`}>
-            {/* TODO: remplacer par une photo chaleureuse du Dr. Abbad Adel avec un jeune patient */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white p-8 transition-default hover:shadow-3xl">
-              <div
-                className="w-full aspect-square rounded-xl flex items-center justify-center"
-                style={{ background: "linear-gradient(135deg, #5BA4CF, #E8F5E9)" }}
-              >
-                <span className="text-white/80 text-sm font-medium text-center px-4">
-                  Photo à venir
-                </span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${BASE_PATH}/images/about-doctor.png`}
+                alt="Dr. Abbad Adel avec un jeune patient"
+                className="w-full aspect-square rounded-xl object-cover"
+              />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-accent text-foreground px-6 py-4 rounded-xl shadow-lg transition-default hover:scale-105">
               {/* TODO: donnée client manquante — remplacer par un vrai chiffre si disponible */}

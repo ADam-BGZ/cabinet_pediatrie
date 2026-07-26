@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronRightIcon } from "@/components/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { BASE_PATH } from "@/lib/utils";
 
 // TODO: confirmer la liste exacte des services avec le Dr. Abbad Adel
 const servicesList = [
@@ -112,14 +113,12 @@ export function Services() {
           </div>
 
           <div className="flex items-center justify-center mt-8 lg:mt-0">
-            {/* TODO: remplacer par une photo d'une consultation pédiatrique ou de l'équipement du cabinet */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-md aspect-[3/4] flex items-center justify-center"
-              style={{ background: "linear-gradient(180deg, #E8F5E9 0%, #5BA4CF 100%)" }}
-            >
-              <span className="text-white/80 text-sm font-medium text-center px-4">
-                Photo à venir
-              </span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${BASE_PATH}/images/services-consultation.png`}
+              alt="Consultation pédiatrique au cabinet"
+              className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-md aspect-[3/4] object-cover"
+            />
           </div>
         </div>
       </div>

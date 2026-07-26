@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { PhoneIcon, MapPinIcon, ClockIcon, MenuIcon, XIcon } from "@/components/icons";
 import { Marquee } from "@/components/Marquee";
+import { BASE_PATH } from "@/lib/utils";
 
 const navLinks = [
   { label: "Accueil", href: "#" },
@@ -54,11 +55,13 @@ export function Header() {
       {/* Main Nav */}
       <div className="bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
-            {/* TODO: remplacer par le vrai logo du cabinet une fois fourni */}
-            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">CP</span>
-            </div>
+          <a href="#" className="flex items-center gap-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${BASE_PATH}/images/logo-pediatrie.png`}
+              alt="Cabinet de Pédiatrie Dr. Abbad Adel"
+              className="w-14 h-14 rounded-full object-cover"
+            />
             <div className="hidden sm:block">
               <span className="font-heading text-xl font-bold text-primary block leading-tight">
                 Cabinet de Pédiatrie
