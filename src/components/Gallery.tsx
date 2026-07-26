@@ -83,7 +83,7 @@ export function Gallery() {
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center animate-fade-in"
+          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center animate-fade-in"
           onClick={close}
           role="dialog"
           aria-label="Galerie photo"
