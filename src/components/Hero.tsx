@@ -6,45 +6,42 @@ import { BASE_PATH } from "@/lib/utils";
 
 const slides = [
   {
-    badge: "Clinique Dentaire à Tétouan",
+    badge: "Cabinet de Pédiatrie à Tétouan",
     title: (
       <>
-        Wilaya Dental
+        Accompagner la croissance
         <br />
-        <span className="text-secondary">Center Nam</span>
+        <span className="text-secondary">de vos enfants</span>
       </>
     ),
     description:
-      "Clinique dentaire multidisciplinaire au cœur de Tétouan. Soins d'exception par Dr. Rachid Nam, où votre sourire est notre priorité.",
-    image: "/images/img-hero-reception.webp",
+      "Suivi médical des nourrissons, enfants et adolescents avec douceur, expertise et bienveillance par Dr. Abbad Adel.",
   },
   {
-    badge: "Esthétique Dentaire",
+    badge: "Suivi Médical",
     title: (
       <>
-        Souriez en{" "}
-        <span className="text-secondary">Confiance</span>
+        Douceur &{" "}
+        <span className="text-secondary">Bienveillance</span>
       </>
     ),
     description:
-      "Blanchiment dentaire, facettes et smile design. Transformez votre sourire avec nos solutions esthétiques modernes et personnalisées.",
-    image: "/images/bg-52.webp",
+      "Consultations pédiatriques, vaccinations et conseils aux parents dans un environnement rassurant et adapté aux plus jeunes.",
   },
   {
-    badge: "Technologie de Pointe",
+    badge: "Pour les Enfants",
     title: (
       <>
-        Imagerie{" "}
-        <span className="text-secondary">3D / CBCT</span>
+        Expertise{" "}
+        <span className="text-secondary">Pédiatrique</span>
       </>
     ),
     description:
-      "Imagerie radiologique 3D intégrée au centre pour des diagnostics précis et des traitements planifiés avec une précision maximale.",
-    image: "/images/bg-52.webp",
+      "Un accompagnement personnalisé pour chaque enfant, du nourrisson à l'adolescent, au cœur de Tétouan.",
   },
 ];
 
-const services = ["IMPLANTOLOGIE", "ESTHÉTIQUE", "ORTHODONTIE", "SOINS GÉNÉRAUX"];
+const services = ["NOURRISSONS", "ENFANTS", "ADOLESCENTS", "VACCINATIONS"];
 
 export function Hero() {
   const [current, setCurrent] = useState(0);
@@ -61,40 +58,36 @@ export function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-[600px] sm:min-h-[700px] lg:min-h-[900px] flex items-center overflow-hidden">
-      {/* Backgrounds */}
-      {slides.map((s, i) => (
-        <div
-          key={i}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ backgroundImage: `url('${BASE_PATH}${s.image}')` }}
-        />
-      ))}
-      <div className="absolute inset-0 bg-primary/80" />
+    <section className="relative min-h-[85svh] flex items-center overflow-hidden">
+      {/* Image de fond fixe — toujours visible */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('${BASE_PATH}/images/img-hero-1.png')` }}
+      />
+      <div className="absolute inset-0 bg-primary/75" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 sm:py-32 lg:py-40 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 sm:py-24 lg:py-28 w-full">
         <div className="max-w-2xl">
-          <div key={`badge-${current}`} className="animate-fade-in-down">
-            <span className="inline-block bg-secondary/20 text-secondary text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+          <div key={`badge-${current}`} className="animate-hero-fade-in">
+            <span className="inline-block bg-secondary/20 text-secondary text-xs sm:text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-5 sm:mb-6">
               {slide.badge}
             </span>
 
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-5 leading-tight">
               {slide.title}
             </h1>
           </div>
 
-          <div key={`desc-${current}`} className="animate-fade-in-left">
-            <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 max-w-xl">
+          <div key={`desc-${current}`} className="animate-hero-fade-in">
+            <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-6 sm:mb-8 max-w-xl leading-relaxed">
               {slide.description}
             </p>
 
+            {/* TODO: confirmer canal de contact préféré */}
             <a
-              href="tel:+212668676834"
-              className="inline-flex items-center gap-2 bg-secondary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base transition-all-fast hover:bg-secondary/90 min-h-[44px]"
+              href="tel:+212674405060"
+              className="inline-flex items-center gap-2 bg-secondary text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-semibold text-sm sm:text-base transition-all-fast hover:bg-secondary/90 min-h-[44px]"
             >
               Réservez votre rendez-vous
               <ArrowRightIcon className="w-5 h-5" />
@@ -103,7 +96,7 @@ export function Hero() {
         </div>
 
         {/* Service Pills */}
-        <div className="flex flex-wrap gap-2 sm:gap-3 mt-8 sm:mt-12 animate-fade-in-up">
+        <div className="flex flex-wrap gap-2 sm:gap-3 mt-8 sm:mt-10 animate-hero-fade-in">
           {services.map((service) => (
             <span
               key={service}
@@ -115,13 +108,13 @@ export function Hero() {
         </div>
 
         {/* Slide Indicators */}
-        <div className="flex gap-2 mt-10">
+        <div className="flex gap-2 mt-8 sm:mt-10">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === current ? "bg-secondary w-8" : "bg-white/40 hover:bg-white/60"
+              className={`h-3 rounded-full transition-all ${
+                i === current ? "bg-secondary w-8" : "bg-white/40 hover:bg-white/60 w-3"
               }`}
               aria-label={`Slide ${i + 1}`}
             />

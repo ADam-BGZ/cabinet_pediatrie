@@ -164,7 +164,7 @@ export function MailIcon({ className }: { className?: string }) {
   );
 }
 
-export function ToothIcon({ className }: { className?: string }) {
+export function BabyIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -175,7 +175,11 @@ export function ToothIcon({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M12 2C9.5 2 7.5 3.5 7 5.5C6.5 7.5 5 8 4 9C3 10 3 12 4 14C5 16 6 18 7 20C8 22 9 22 10 22C11 22 11.5 20 12 18C12.5 20 13 22 14 22C15 22 16 22 17 20C18 18 19 16 20 14C21 12 21 10 20 9C19 8 17.5 7.5 17 5.5C16.5 3.5 14.5 2 12 2Z" />
+      <circle cx="12" cy="8" r="5" />
+      <path d="M7 21v-2a5 5 0 0 1 10 0v2" />
+      <circle cx="9.5" cy="7.5" r="0.5" fill="currentColor" stroke="none" />
+      <circle cx="14.5" cy="7.5" r="0.5" fill="currentColor" stroke="none" />
+      <path d="M10 10.5c0.5 0.8 1.2 1 2 1s1.5-0.2 2-1" />
     </svg>
   );
 }

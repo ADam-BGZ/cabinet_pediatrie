@@ -1,14 +1,12 @@
 "use client";
 
 export function Marquee() {
-  // TODO: le client pourra ajouter de vrais chiffres ici (nombre de patients, années d'expérience, etc.)
   const items = [
-    "Wilaya Dental Center Nam",
-    "Dr. Rachid Nam",
-    "Clinique Dentaire Multidisciplinaire",
-    "Tétouan — Quartier de la Wilaya",
-    "+212 6 68 67 68 34",
-    "Lun – Ven : 9h00 – 18h00 | Sam : 9h – 13h",
+    "Cabinet de Pédiatrie Dr. Abbad Adel",
+    "Suivi Nourrissons, Enfants & Ados",
+    "+212 6 74 40 50 60",
+    "Tétouan",
+    "Lun – Ven : 9h00 – 17h00 | Sam : 9h – 13h",
   ];
 
   return (

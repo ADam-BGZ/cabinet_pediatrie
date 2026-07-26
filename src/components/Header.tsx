@@ -23,11 +23,11 @@ export function Header() {
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
             <div className="hidden sm:flex items-center gap-2">
               <ClockIcon className="w-4 h-4" />
-              <span>Lun – Ven : 9h00 – 18h00 | Sam : 9h – 13h</span>
+              <span>Lun – Ven : 9h00 – 17h00 | Sam : 9h – 13h</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <MapPinIcon className="w-4 h-4" />
-              <span>Villa N°38, Av. Mohamed El Yazidi, Tétouan</span>
+              <span>Avenue Ali Yaeta, Tétouan</span>
             </div>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
@@ -38,11 +38,11 @@ export function Header() {
               Contactez-nous
             </a>
             <a
-              href="tel:+212668676834"
+              href="tel:+212674405060"
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
               <PhoneIcon className="w-4 h-4" />
-              <span className="font-semibold">+212 6 68 67 68 34</span>
+              <span className="font-semibold">+212 6 74 40 50 60</span>
             </a>
           </div>
         </div>
@@ -55,15 +55,16 @@ export function Header() {
       <div className="bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">W</span>
+            {/* TODO: remplacer par le vrai logo du cabinet une fois fourni */}
+            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-lg">CP</span>
             </div>
             <div className="hidden sm:block">
               <span className="font-heading text-xl font-bold text-primary block leading-tight">
-                Wilaya Dental
+                Cabinet de Pédiatrie
               </span>
               <span className="text-[10px] text-muted-foreground tracking-wider uppercase">
-                Center Nam
+                Dr. Abbad Adel
               </span>
             </div>
           </a>
@@ -82,9 +83,10 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
+            {/* TODO: confirmer canal de contact préféré */}
             <a
-              href="tel:+212668676834"
-              className="hidden sm:flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-secondary/90 transition-colors"
+              href="tel:+212674405060"
+              className="hidden sm:flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-secondary/90 transition-colors min-h-[44px]"
             >
               Prenez RDV
             </a>
@@ -116,9 +118,10 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
+              {/* TODO: confirmer canal de contact préféré */}
               <a
-                href="tel:+212668676834"
-                className="flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold text-sm"
+                href="tel:+212674405060"
+                className="flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold text-sm min-h-[44px]"
               >
                 Prenez RDV
               </a>

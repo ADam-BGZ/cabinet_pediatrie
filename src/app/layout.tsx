@@ -16,9 +16,9 @@ const libreCaslon = Libre_Caslon_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Wilaya Dental Center Nam — Dentiste à Tétouan | Dr. Rachid Nam",
+  title: "Cabinet de Pédiatrie Dr. Abbad Adel — Pédiatrie à Tétouan",
   description:
-    "Clinique dentaire multidisciplinaire à Tétouan. Implantologie, esthétique, orthodontie et soins généraux par Dr. Rachid Nam. Cabinet moderne et équipé.",
+    "Cabinet de pédiatrie à Tétouan. Suivi médical des nourrissons, enfants et adolescents par Dr. Abbad Adel. Accompagnement bienveillant et expertise médicale.",
 };
 
 export default function RootLayout({

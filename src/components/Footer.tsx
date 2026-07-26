@@ -7,7 +7,6 @@ import {
   ClockIcon,
 } from "@/components/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { BASE_PATH } from "@/lib/utils";
 
 const quickLinks = [
   { label: "Accueil", href: "#" },
@@ -18,19 +17,19 @@ const quickLinks = [
 ];
 
 const contactItems = [
-  { icon: PhoneIcon, text: "+212 6 68 67 68 34", href: "tel:+212668676834" },
+  { icon: PhoneIcon, text: "+212 6 74 40 50 60", href: "tel:+212674405060" },
   {
     icon: MailIcon,
     // TODO: Remplacer par l'adresse email du cabinet
-    text: "contact@wilaya-dental.ma",
-    href: "mailto:contact@wilaya-dental.ma",
+    text: "contact@cabinet-pediatrie.ma",
+    href: "mailto:contact@cabinet-pediatrie.ma",
   },
   {
     icon: MapPinIcon,
-    text: "Villa N°38, Av. Mohamed El Yazidi, Tétouan",
+    text: "Avenue Ali Yaeta, Tétouan",
     href: "#",
   },
-  { icon: ClockIcon, text: "Lun – Ven : 9h00 – 18h00 | Sam : 9h – 13h", href: "" },
+  { icon: ClockIcon, text: "Lun – Ven : 9h00 – 17h00 | Sam : 9h – 13h", href: "" },
 ];
 
 export function Footer() {
@@ -43,21 +42,17 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-6">
-              {/* TODO: Fond blanc ajouté car le logo PNG a un fond opaque — retirer si un logo transparent est fourni */}
-              <div className="bg-white rounded-lg p-2 inline-block">
-                <img
-                  src={`${BASE_PATH}/images/logo-wilaya.png`}
-                  alt="Wilaya Dental Center Nam"
-                  className="h-10 w-auto"
-                />
+              {/* TODO: remplacer par le vrai logo du cabinet une fois fourni */}
+              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center inline-flex">
+                <span className="text-white font-bold text-lg">CP</span>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Clinique dentaire multidisciplinaire à Tétouan. Soins
-              professionnels et personnalisés par Dr. Rachid Nam.
+              Cabinet de pédiatrie à Tétouan. Suivi médical des nourrissons,
+              enfants et adolescents par Dr. Abbad Adel.
             </p>
             <div className="flex gap-4">
-              {/* TODO: Ajouter les vrais liens réseaux sociaux du Dr Rachid Nam */}
+              {/* TODO: Ajouter les vrais liens réseaux sociaux du Dr Abbad Adel */}
               <a
                 href="#"
                 target="_blank"
@@ -127,7 +122,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-6">Newsletter</h3>
             <p className="text-white/60 text-sm mb-4">
-              Restez informé de nos actualités et conseils santé bucco-dentaire.
+              Restez informé de nos actualités et conseils santé pour vos enfants.
             </p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
@@ -137,7 +132,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="bg-accent text-foreground px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent/90 transition-colors"
+                className="bg-accent text-foreground px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent/90 transition-colors min-h-[44px]"
               >
                 Envoyer
               </button>
@@ -150,7 +145,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center">
           <p className="text-white/50 text-sm">
-            &copy; {new Date().getFullYear()} Wilaya Dental Center. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Cabinet de Pédiatrie Dr. Abbad Adel. Tous droits réservés.
           </p>
         </div>
       </div>

@@ -28,19 +28,6 @@ export interface AboutData {
   ctaLink: string;
 }
 
-export interface BeforeAfterData {
-  tag: string;
-  title: string;
-  subtitle: string;
-  cases: {
-    id: number;
-    beforeImage: string;
-    afterImage: string;
-    title: string;
-  }[];
-  ctaText: string;
-  ctaLink: string;
-}
 
 export interface StatItem {
   value: string;

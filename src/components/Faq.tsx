@@ -4,36 +4,37 @@ import { useState } from "react";
 import { ChevronRightIcon } from "@/components/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+// TODO: brouillon de questions à valider avec le Dr. Abbad Adel
 const faqs = [
   {
-    question: "Comment prendre rendez-vous au Wilaya Dental Center ?",
+    question: "Comment prendre rendez-vous au Cabinet de Pédiatrie ?",
     answer:
-      "Vous pouvez prendre rendez-vous par téléphone au +212 6 68 67 68 34, via WhatsApp, ou en remplissant le formulaire de contact. Nous offrons des créneaux flexibles du lundi au vendredi de 9h à 18h, et le samedi de 9h à 13h.",
+      "Vous pouvez prendre rendez-vous par téléphone au +212 6 74 40 50 60, via WhatsApp, ou en remplissant le formulaire de contact. Nous offrons des créneaux flexibles du lundi au vendredi de 9h à 17h, et le samedi de 9h à 13h.",
   },
   {
-    question: "Quels types de soins propose le cabinet ?",
+    question: "Quels âges acceptez-vous au cabinet ?",
     answer:
-      "Notre cabinet est organisé en 4 pôles spécialisés : Chirurgie & Implants, Esthétique dentaire (blanchiment, facettes, smile design), Orthodontie (bagues et aligneurs transparents), et Soins Généraux (détartrage, caries, prothèses). Nous disposons également d'un scanner CBCT 3D sur place.",
+      "Notre cabinet accueille les nourrissons, les enfants et les adolescents. Le Dr. Abbad Adel assure un suivi médical complet adapté à chaque tranche d'âge, de la naissance à l'adolescence.",
   },
   {
-    question: "Le scanner CBCT 3D est-il disponible au cabinet ?",
+    question: "Quand consulter un pédiatre pour la première fois ?",
     answer:
-      "Oui, nous disposons d'un cone beam (CBCT) 3D de dernière génération pour des diagnostics précis en implantologie, chirurgie et orthodontie. Les images sont analyées directement par le Dr. Nam pour un plan de traitement optimal.",
+      "Il est recommandé de consulter un pédiatre dès les premières semaines de vie de votre enfant. Le Dr. Abbad Adel vous guide dans les examens de surveillance essentiels et le calendrier vaccinal.",
   },
   {
-    question: "Acceptez-vous les enfants ?",
+    question: "Le cabinet propose-t-il des vaccinations ?",
     answer:
-      "Absolument ! Notre cabinet accueille les patients de tous les âges. Notre équipe est formée pour offrir un environnement rassurant aux plus jeunes, avec des soins préventifs et traitements adaptés à chaque tranche d'âge.",
+      "Oui, nous assurons la vaccination selon le calendrier vaccinal officiel. Le Dr. Abbad Adel vous informe sur les vaccins recommandés et assure leur administration dans un cadre sécurisé.",
   },
   {
     question: "Quels moyens de paiement acceptez-vous ?",
     answer:
-      "Nous acceptons les paiements en espèces, par carte bancaire et par chèque. {/* TODO: Ajouter les autres moyens de paiement acceptés par le cabinet (Virement, Amex, etc.) */} Des facilités de paiement peuvent être proposées pour les traitements de longue durée.",
+      "Nous acceptons les paiements en espèces et par carte bancaire. {/* TODO: Ajouter les autres moyens de paiement acceptés par le cabinet */} N'hésitez pas à nous contacter pour toute question.",
   },
   {
-    question: "Faut-il une ordonnance pour consulter ?",
+    question: "Comment se déroule la première consultation ?",
     answer:
-      "Non, aucune ordonnance n'est nécessaire pour consulter au Wilaya Dental Center. Vous pouvez prendre rendez-vous directement par téléphone ou via notre site. Le Dr. Nam établira un plan de traitement personnalisé lors de votre première visite.",
+      "Lors de la première consultation, le Dr. Abbad Adel réalise un bilan de santé complet de votre enfant, prend connaissance de ses antécédents et répond à toutes vos questions. Apportez le carnet de santé de votre enfant si possible.",
   },
 ];
 
@@ -43,7 +44,7 @@ export function Faq() {
   const list = useScrollAnimation("up");
 
   return (
-    <section id="faq" className="py-24 lg:py-40 bg-muted">
+    <section id="faq" className="py-24 lg:py-32 bg-muted">
       <div className="max-w-4xl mx-auto px-4">
         <div ref={header.refCallback} className={`text-center max-w-2xl mx-auto mb-16 ${header.animationClass}`}>
           <span className="text-secondary text-sm font-semibold uppercase tracking-wider">
