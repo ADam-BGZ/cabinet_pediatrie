@@ -17,7 +17,6 @@ const photos = [
 export function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const header = useScrollAnimation("down");
-  const grid = useScrollAnimation("up");
 
   const close = useCallback(() => setLightboxIndex(null), []);
   const prev = useCallback(() => setLightboxIndex((i) => (i !== null ? (i - 1 + photos.length) % photos.length : null)), []);
@@ -53,7 +52,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div ref={grid.refCallback} className={`grid grid-cols-2 md:grid-cols-3 gap-4 ${grid.animationClass}`}>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {photos.map((photo, i) => (
             <button
               key={i}
